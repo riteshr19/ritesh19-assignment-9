@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Networks Visualization</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Neural Networks Visualization</h1>
+    </header>
+    <div class="container">
+        <form id="experiment-form">
+            <div class="input-group">
+                <label for="activation">Activation:</label>
+                <select id="activation" name="activation" required>
+                    <option value="relu">ReLU</option>
+                    <option value="tanh">Tanh</option>
+                    <option value="sigmoid">Sigmoid</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="lr">Learning Rate:</label>
+                <input type="number" step="0.01" id="lr" name="lr" required>
+            </div>
+            <div class="input-group">
+                <label for="hidden_size">Hidden Layer Size:</label>
+                <input type="number" step="1" id="hidden_size" name="hidden_size" required>
+            </div>
+            <div class="input-group">
+                <label for="epochs">Number of Epochs:</label>
+                <input type="number" step="1" id="epochs" name="epochs" required>
+            </div>
+            <div class="button-group">
+                <button type="submit">Train and Visualize</button>
+                <button type="button" id="random-button">Randomize</button>
+                <button type="button" id="clear-button">Clear</button>
+            </div>
+        </form>
+        <div id="results" class="results" style="display: none;">
+            <h2>Results</h2>
+            <img id="result_gif" src="" style="display: none;">
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
